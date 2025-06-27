@@ -1,43 +1,77 @@
 {
   "name": "next-theme-toggle",
-  "version": "1.4.17",
-  "description": "A CLI tool to quickly add dark/light theme toggle to Next.js projects with Tailwind CSS",
+  "version": "1.4.18",
+  "description": "A CLI tool that instantly sets up dark/light theme toggling in your Next.js projects + Tailwind CSS v4 with zero configuration hassle.",
   "type": "module",
   "main": "index.js",
   "bin": {
     "next-theme-toggle": "./index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "node test.js",
+    "dev": "node index.js",
+    "lint": "echo \"No linting configured yet\"",
+    "prepublishOnly": "echo \"Running pre-publish checks...\" && node -c index.js"
   },
   "keywords": [
     "nextjs",
+    "next.js",
     "tailwind",
+    "tailwindcss",
     "theme",
     "dark-mode",
+    "light-mode",
+    "theme-toggle",
     "cli",
-    "toggle"
+    "tool",
+    "typescript",
+    "javascript",
+    "ui",
+    "components",
+    "next-themes",
+    "setup",
+    "boilerplate",
+    "generator",
+    "scaffold"
   ],
-  "author": "Megh Bari",
+  "author": {
+    "name": "Megh Bari",
+    "email": "meghbari01@gmail.com",
+    "url": "https://github.com/megh-bari"
+  },
   "license": "MIT",
   "files": [
     "index.js",
-    "templates/"
+    "templates/",
+    "README.md",
+    "LICENSE"
   ],
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/megh-bari/next-theme-toggle.git"
+    "url": "git+https://github.com/megh-bari/next-theme-toggle.git"
   },
   "bugs": {
-    "url": "https://github.com/megh-bari/next-theme-toggle/issues"
+    "url": "https://github.com/megh-bari/next-theme-toggle/issues",
+    "email": "meghbari01@gmail.com"
   },
   "homepage": "https://github.com/megh-bari/next-theme-toggle#readme",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/megh-bari"
+  },
   "dependencies": {
     "chalk": "^5.4.1",
     "execa": "^9.6.0",
     "ora": "^8.2.0"
+  },
+  "preferGlobal": true,
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
