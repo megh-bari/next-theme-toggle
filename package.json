@@ -1,0 +1,43 @@
+{
+  "name": "next-theme-toggle",
+  "version": "1.4.15",
+  "description": "A CLI tool to quickly add dark/light theme toggle to Next.js projects with Tailwind CSS",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "next-theme-toggle": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nextjs",
+    "tailwind",
+    "theme",
+    "dark-mode",
+    "cli",
+    "toggle"
+  ],
+  "author": "Megh Bari",
+  "license": "MIT",
+  "files": [
+    "index.js",
+    "templates/"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/megh-bari/next-theme-toggle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/megh-bari/next-theme-toggle/issues"
+  },
+  "homepage": "https://github.com/megh-bari/next-theme-toggle#readme",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "execa": "^9.6.0",
+    "ora": "^8.2.0"
+  }
+}
