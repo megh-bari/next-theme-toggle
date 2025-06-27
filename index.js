@@ -29,7 +29,7 @@ function detectPackageManager() {
 // run package manager commands safely
 async function runCommand(packageManager, args, cwd = process.cwd()) {
   const commandStr = `${packageManager} ${args.join(" ")}`;
-  const packages = args.slice(1).join(", "); // skip 'install'
+  const packages = args.slice(1).join(", ");
 
   const spinner = ora({
     text: `Installing packages: ${commandStr}`,
@@ -74,7 +74,7 @@ function checkNextJsProject() {
   }
 
   log.success("Next.js project detected");
-  console.log(); // ← adds one blank line
+  console.log(); // adds one blank line
   return packageJson;
 }
 
@@ -132,7 +132,7 @@ async function setupTailwind(packageManager) {
   } else {
     // Tailwind v4+ already installed
     log.success("Tailwind CSS v4+ already installed");
-    console.log();
+    // console.log();
 
     // Return flag to indicate existing installation
     return { freshInstall: false };
@@ -140,7 +140,6 @@ async function setupTailwind(packageManager) {
 }
 
 // handle globals.css with custom dark mode approach
-
 function setupGlobalsCss(isFreshTailwindInstall = false) {
   const appDir = getAppDirectory();
   const possiblePaths = [
@@ -257,7 +256,7 @@ body {
   }
 }
 
-// Create PostCSS configuration file - ONLY for fresh installations (No Tailwind scenario)
+// Create PostCSS configuration file - ONLY for fresh installations (No Tailwind)
 function createPostCSSConfig() {
   const configFileName = "postcss.config.mjs";
 
@@ -274,7 +273,7 @@ export default config;
   log.success(`Created ${configFileName} with Tailwind CSS v4 configuration`);
 }
 
-// Update existing PostCSS config for v4 - for upgrade scenario
+// Update existing PostCSS config for v4 - for upgrade
 function updatePostCSSConfigForV4() {
   const existingConfigs = [
     "postcss.config.js",
@@ -341,7 +340,7 @@ async function installDependencies(packageJson, packageManager) {
     log.info(`Installing dependencies:\n${prettyList}\n`);
     await runCommand(packageManager, ["install", ...depsToInstall]);
     log.success("Dependencies installed successfully");
-    console.log(); // ← adds one blank line
+    console.log(); // adds one blank line
   } else {
     log.success("Required dependencies already installed");
   }
@@ -384,9 +383,9 @@ function copyTemplateFiles() {
 
   // copy ThemeToggle component
   const themeToggleSrc = path.join(
-    templateDir, // e.g. ".../templates"
+    templateDir,
     "components", // sub-folder
-    `ThemeToggle${isTS ? ".tsx" : ".jsx"}` // file name with right extension
+    `ThemeToggle${isTS ? ".tsx" : ".jsx"}`
   );
 
   const themeToggleDest = path.join(componentsDir, `ThemeToggle${ext}`);
@@ -425,10 +424,10 @@ function copyTemplateFiles() {
 
   // copy Header component
   const headerSrc = path.join(
-    templateDir, // e.g. ".../templates"
+    templateDir,
     "components", // sub-folder
     "layout", // nested inside components
-    `Header${ext}` // file name with .tsx or .jsx
+    `Header${ext}`
   );
 
   const headerDest = path.join(layoutDir, `Header${ext}`);
@@ -452,9 +451,9 @@ function copyTemplateFiles() {
 
   // copy ExampleCard component
   const exampleCardSrc = path.join(
-    templateDir, // e.g. ".../templates"
+    templateDir,
     "components", // sub-folder
-    `ExampleCard${ext}` // file name with .tsx or .jsx
+    `ExampleCard${ext}`
   );
 
   const exampleCardDest = path.join(componentsDir, `ExampleCard${ext}`);
