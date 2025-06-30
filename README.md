@@ -48,6 +48,11 @@ npm i next-theme-toggle
 next-theme-toggle
 ```
 
+### Watch Demo
+
+[Watch Demo](https://github.com/user-attachments/assets/6d72b9d3-ef5b-4eff-8988-065f97cb5f7a)
+
+
 ### Expected Output
 
 **Scenario 1: Fresh Tailwind CSS Installation**

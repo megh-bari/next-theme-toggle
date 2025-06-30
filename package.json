@@ -1,6 +1,6 @@
 {
   "name": "next-theme-toggle",
-  "version": "1.4.18",
+  "version": "1.4.19",
   "description": "A CLI tool that instantly sets up dark/light theme toggling in your Next.js projects + Tailwind CSS v4 with zero configuration hassle.",
   "type": "module",
   "main": "index.js",
